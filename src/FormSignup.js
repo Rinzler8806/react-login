@@ -1,9 +1,12 @@
 import React from 'react';
+import useForm from './useForm';
 
 const FormSignup = () => {
+    const { handleChange, values, handleSubmit } = useForm();
+
     return (
             <div className="form-content-right">
-                <form className="form">
+                <form className="form" onSubmit={handleSubmit}>
                     <h1>Get started with us today! Create your account by filling out the information below.</h1>
                     <div className="form-inputs">
                     <label htmlFor="username"
@@ -16,6 +19,8 @@ const FormSignup = () => {
                             name ="username" 
                             className="form-input"
                             placeholder="Enter your username"
+                            value={values.username}
+                            onChange={handleChange}
                             />
                     </div>
                     <div className="form-inputs">
@@ -29,6 +34,8 @@ const FormSignup = () => {
                             name ="email" 
                             className="form-input"
                             placeholder="Enter your email"
+                            value={values.email}
+                            onChange={handleChange}
                             />
                     </div>
                     <div className="form-inputs">
@@ -42,6 +49,8 @@ const FormSignup = () => {
                             name ="password" 
                             className="form-input"
                             placeholder="Enter your password"
+                            value={values.password}
+                            onChange={handleChange}
                             />
                     </div>
                     <div className="form-inputs">
@@ -55,6 +64,8 @@ const FormSignup = () => {
                             name ="password2" 
                             className="form-input"
                             placeholder="Enter your password2"
+                            value={values.password2}
+                            onChange={handleChange}
                             />
                     </div>
                     <button className="form-input-btn" 
