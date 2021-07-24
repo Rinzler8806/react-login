@@ -14,7 +14,7 @@ const Form = () => {
 <div className="form-container">
     <span className="close-btn">x</span>
     <div className="form-content-left">
-        <img src="img/img-2.svg" alt="bull" className="form-img"/>
+    <img className='form-img' src='images/bullish.png' alt='bullish' />
     </div>
     {!isSubmitted ? (<FormSignup submitForm=
             {submitForm} />) : <FormSuccess />}
